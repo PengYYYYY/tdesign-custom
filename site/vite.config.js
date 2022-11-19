@@ -2,6 +2,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import { createVuePlugin } from 'vite-plugin-vue2';
 import tdocPlugin from './plugin-tdoc';
+import ScriptSetup from 'unplugin-vue2-script-setup/vite';
 
 // https://vitejs.dev/config/
 export default () =>
@@ -12,7 +13,7 @@ export default () =>
         '@': path.resolve(__dirname, '../'),
         '@common': path.resolve(__dirname, '../_tdesign-vue/src/_common'),
         'tdesign-site': path.resolve(__dirname, '../_tdesign-vue/src/'),
-        '@tencent/codesign-uikit': path.resolve(__dirname, '../src'),
+        'tdesign-custom': path.resolve(__dirname, '../src'),
         vue: 'vue/dist/vue.esm.js',
       },
     },
@@ -34,5 +35,6 @@ export default () =>
         jsx: true,
       }),
       tdocPlugin(),
+      ScriptSetup({}),
     ],
   });

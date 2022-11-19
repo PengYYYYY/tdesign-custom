@@ -166,7 +166,7 @@ function customRender({ source, file, md }) {
     const usageObj = compileUsage({
       componentName,
       usage: pageData.usage,
-      demoPath: path.posix.resolve(__dirname, `../../src/${componentName}/_usage/index.vue`),
+      demoPath: path.posix.resolve(__dirname, `../../_tdesign-vue/src/${componentName}/_usage/index.vue`),
     });
     if (usageObj) {
       mdSegment.usage = usageObj;

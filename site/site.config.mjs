@@ -30,16 +30,16 @@ const docs = [
   },
   {
     title: '一个业务组件',
-    titleEn: 'BusinessComponent',
+    titleEn: 'CustomComponent',
     type: 'component', // 组件文档
     children: [
       {
         title: '一个业务组件',
-        titleEn: 'BusinessComponent',
-        name: 'business',
-        path: '/vue/components/cd-icon',
-        component: () => import('@tencent/codesign-uikit/business/business.md'),
-        componentEn: () => import('@tencent/codesign-uikit/business/business.en-US.md'),
+        titleEn: 'CustomComponent',
+        name: 'custom',
+        path: '/vue/components/custom',
+        component: () => import('tdesign-custom/custom/custom.md'),
+        componentEn: () => import('tdesign-custom/custom/custom.en-US.md'),
       },
     ],
   },

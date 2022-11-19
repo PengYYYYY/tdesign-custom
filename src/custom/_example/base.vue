@@ -1,6 +1,6 @@
 <template>
   <t-space size="24px">
-    <t-bs-title />
+    <t-cus-title />
   </t-space>
 </template>
 <script>

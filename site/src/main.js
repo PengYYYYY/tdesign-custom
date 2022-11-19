@@ -1,12 +1,13 @@
 /* eslint-disable */
 import Vue from "vue";
 import VueRouter from "vue-router";
-import CDesignUI from "@tencent/codesign-uikit";
+import TdesignCustom from "tdesign-custom";
 import routes from "./routes";
 import App from "./App.vue";
 
 import Codesandbox from "./components/codesandbox/index.vue";
 import Stackblitz from "./components/stackblitz/index.vue";
+import BaseUsage from './components/base-usage.vue';
 
 // import site webcomponents
 import "tdesign-site-components";
@@ -16,19 +17,20 @@ import "tdesign-site-components/lib/styles/prism-theme-dark.less";
 
 // import tdesign style;
 import "@common/style/web/docs.less";
-import '@tencent/codesign-uikit/style/_theme.less'
+import 'tdesign-custom/style/_theme.less'
 
 // import icons webcomponents
 import "tdesign-icons-view";
 
 
-Vue.use(CDesignUI);
+Vue.use(TdesignCustom);
 Vue.use(VueRouter);
 
 Vue.config.ignoredElements = [/^td-/];
 
 Vue.component("Codesandbox", Codesandbox);
 Vue.component("Stackblitz", Stackblitz);
+Vue.component('BaseUsage', BaseUsage);
 
 const router = new VueRouter({
   mode: "history",

@@ -19,8 +19,8 @@ npm i tdesign-vue
 
 ```js
 import Vue from 'vue';
-import TDesignBs from 'tdesign-business';
+import TdesignCustom from 'tdesign-custom';
 
-Vue.use(TDesignBs);
+Vue.use(TdesignCustom);
 ```
 
