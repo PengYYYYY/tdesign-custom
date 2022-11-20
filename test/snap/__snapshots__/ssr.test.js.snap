@@ -1,0 +1,3 @@
+// Vitest Snapshot v1
+
+exports[`ssr snapshot test > renders ./src/custom/_example/base.vue correctly 1`] = `"<div data-server-rendered=\\"true\\" class=\\"t-space t-space-horizontal\\" style=\\"gap:24px;\\"><div class=\\"t-space-item\\"><div class=\\"t-bs-title\\">第一个基础组件</div></div></div>"`;

@@ -1,5 +1,5 @@
 import _Custom from "./custom";
-import withInstall from '../../_tdesign-vue/src/utils/withInstall'
+import withInstall from '../utils/withinstall'
 
 import './style';
 

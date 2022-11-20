@@ -1,0 +1,18 @@
+// Vitest Snapshot v1
+
+exports[`csr snapshot test > csr test ./src/custom/_example/base.vue 1`] = `
+<div
+  class="t-space t-space-horizontal"
+  style="gap: 24px;"
+>
+  <div
+    class="t-space-item"
+  >
+    <div
+      class="t-bs-title"
+    >
+      第一个基础组件
+    </div>
+  </div>
+</div>
+`;
