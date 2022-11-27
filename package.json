@@ -12,26 +12,14 @@
     "README.md",
     "CHANGELOG.md"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    },
-    "./components": {
-      "import": "./dist/components/index.mjs",
-      "types": "./dist/components/index.d.ts"
-    },
-    "./*": {
-      "import": "./dist/components/*/index.vue",
-      "types": "./dist/components/*/index.vue.d.ts"
-    }
-  },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "init": "git submodule init && git submodule update && cd _tdesign-vue && git submodule init && git submodule update",
     "dev:site": "cd site/ && vite",
     "clean": "rimraf dist",
     "lint": "eslint .",
     "prebuild": "rimraf es/* esm/* lib/* cjs/* dist/*",
+    "preview": "cd site && vite preview",
     "build:site": "cd site/ && vite build",
     "build:pkg": "npm run prebuild && cross-env NODE_ENV=production rollup -c scripts/rollup.config.js && npm run build:tsc",
     "build:tsc": "run-p build:tsc-*",
@@ -121,5 +109,8 @@
     "tdesign-icons-vue": "^0.1.4",
     "tdesign-vue": "0.49.3",
     "vue": "^2.6.14"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

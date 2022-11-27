@@ -1,40 +1,27 @@
-import path from 'path';
-import { defineConfig } from 'vite';
-import { createVuePlugin } from 'vite-plugin-vue2';
-import tdocPlugin from './plugin-tdoc';
-import ScriptSetup from 'unplugin-vue2-script-setup/vite';
+import { defineConfig } from "vite";
+import tdocPlugin from "./plugin-tdoc";
+import { aliasConfig, basePlugin } from "../scripts/vite.base.config";
 
 // https://vitejs.dev/config/
-export default () =>
-  defineConfig({
-    base: '/',
+export default ({ mode }) => {
+  return defineConfig({
+    base: mode === 'development' ? '' : 'tdesign-custom',
+    base: "/",
     resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '../'),
-        '@common': path.resolve(__dirname, '../_tdesign-vue/src/_common'),
-        'tdesign-site': path.resolve(__dirname, '../_tdesign-vue/src/'),
-        'tdesign-custom': path.resolve(__dirname, '../src'),
-        vue: 'vue/dist/vue.esm.js',
-      },
+      alias: aliasConfig,
     },
     build: {
-      outDir: '../_site',
+      outDir: "../_site",
     },
     server: {
-      host: '0.0.0.0',
+      host: "0.0.0.0",
       port: 16000,
-      open: '/',
+      open: "/",
       https: false,
       fs: {
         strict: false,
       },
     },
-    plugins: [
-      createVuePlugin({
-        include: /(\.md|\.vue)$/,
-        jsx: true,
-      }),
-      tdocPlugin(),
-      ScriptSetup({}),
-    ],
+    plugins: [...basePlugin, tdocPlugin()],
   });
+};

@@ -103,7 +103,7 @@ export default function mdToVue(options) {
               desc: \`${mdSegment.description}\`,
             };
           }
-          document.title = \`${mdSegment.title} | TDesign\`;
+          document.title = \`${mdSegment.title} | TDesign Custom\`;
 
           if (tdDocTabs) {
             tdDocTabs.tabs = ${JSON.stringify(mdSegment.tdDocTabs)};

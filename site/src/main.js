@@ -15,12 +15,16 @@ import "tdesign-site-components/lib/styles/style.css";
 import "tdesign-site-components/lib/styles/prism-theme.less";
 import "tdesign-site-components/lib/styles/prism-theme-dark.less";
 
-// import tdesign style;
+// import web doc style;
 import "@common/style/web/docs.less";
-import 'tdesign-custom/style/_theme.less'
 
 // import icons webcomponents
 import "tdesign-icons-view";
+
+// tdesign global style
+import 'tdesign-site/style/index.js';
+// custom rewrite style
+import 'tdesign-custom/style/_theme.less'
 
 
 Vue.use(TdesignCustom);
@@ -33,7 +37,6 @@ Vue.component("Stackblitz", Stackblitz);
 Vue.component('BaseUsage', BaseUsage);
 
 const router = new VueRouter({
-  mode: "history",
   routes,
 });
 
