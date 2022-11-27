@@ -6,7 +6,6 @@ import { aliasConfig, basePlugin } from "../scripts/vite.base.config";
 export default ({ mode }) => {
   return defineConfig({
     base: mode === 'development' ? '' : 'tdesign-custom',
-    base: "/",
     resolve: {
       alias: aliasConfig,
     },
