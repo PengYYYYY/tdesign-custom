@@ -1,11 +1,9 @@
-// @ts-check
 import url from "@rollup/plugin-url";
 import json from "@rollup/plugin-json";
 import babel from "@rollup/plugin-babel";
 import vuePlugin from "rollup-plugin-vue";
 import esbuild from "rollup-plugin-esbuild";
 import styles from 'rollup-plugin-styles';
-import postcss from "rollup-plugin-postcss";
 import replace from "@rollup/plugin-replace";
 import { terser } from "rollup-plugin-terser";
 import commonjs from "@rollup/plugin-commonjs";

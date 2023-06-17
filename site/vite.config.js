@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import tdocPlugin from "./plugin-tdoc";
 import { aliasConfig, basePlugin } from "../scripts/vite.base.config";
+import { modifyVars } from '../src/modifyVars'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -11,6 +12,14 @@ export default ({ mode }) => {
     },
     build: {
       outDir: "../_site",
+    },
+    css: {
+      preprocessorOptions: {
+        less: {
+          modifyVars: modifyVars,
+          javascriptEnabled: true,
+        },
+      },
     },
     server: {
       host: "0.0.0.0",
