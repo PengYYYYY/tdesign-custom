@@ -4,7 +4,8 @@
       <header class="TDesign-header">
         <div class="TDesign-header-inner">
           <div class="TDesign-header-left">
-            logo
+            <img src="../../public/logo.svg" alt="">
+            <p class="title">TDesign Custom</p>
           </div>
           <div class="TDesign-header-nav">
             <td-theme-tabs></td-theme-tabs>
@@ -72,7 +73,7 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="less">
 .TDesign-header {
   height: var(--header-height);
   background-color: var(--bg-color-container);
@@ -92,6 +93,17 @@ export default {
   margin: auto;
   transition: all 0.25s var(--anim-time-fn-easing);
 }
+.TDesign-header-left {
+  display: flex;
+  .title {
+    font-family: TencentSansW7;
+    font-size: 24px;
+    margin-left: 12px;
+    font-weight: bold;
+    color: var(--td-font-gray-1);
+  }
+}
+
 .TDesign-header-nav {
   display: flex;
     align-items: center;

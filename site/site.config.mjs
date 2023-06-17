@@ -44,6 +44,34 @@ const docs = [
     ],
   },
   {
+    title: '全局配置',
+    titleEn: 'Global Config',
+    type: 'doc',
+    children: [
+      {
+        title: '全局特性配置',
+        titleEn: 'Config',
+        name: 'config',
+        path: '/vue/config',
+        component: () => import('tdesign-site/config-provider/config-provider.md'),
+      },
+      {
+        title: '自定义主题',
+        titleEn: 'Custom theme',
+        name: 'custom-theme',
+        path: '/vue/custom-theme',
+        component: () => import('@common/theme.md'),
+      },
+      {
+        title: '暗黑模式',
+        titleEn: 'Dark Mode',
+        name: 'dark-mode',
+        path: '/vue/dark-mode',
+        component: () => import('@common/dark-mode.md'),
+      },
+    ],
+  },
+  {
     title: '基础',
     titleEn: 'Base',
     type: 'component', // 组件文档
@@ -135,6 +163,12 @@ const docs = [
         componentEn: () => import('tdesign-site/anchor/anchor.en-US.md'),
       },
       {
+        title: 'BackTop 回到顶部',
+        name: 'back-top',
+        path: '/vue/components/back-top',
+        component: () => import('tdesign-site/back-top/back-top.md'),
+      },
+      {
         title: 'Breadcrumb 面包屑',
         titleEn: 'Breadcrumb',
         name: 'breadcrumb',
@@ -175,6 +209,14 @@ const docs = [
         componentEn: () => import('tdesign-site/steps/steps.en-US.md'),
       },
       {
+        title: 'StickyTool 侧边栏',
+        titleEn: 'StickyTool',
+        name: 'StickyTool',
+        path: '/vue/components/sticky-tool',
+        component: () => import('tdesign-site/sticky-tool/sticky-tool.md'),
+        componentEn: () => import('tdesign-site/sticky-tool/sticky-tool.en-US.md'),
+      },
+      {
         title: 'Tabs 选项卡',
         titleEn: 'Tabs',
         name: 'tabs',
@@ -189,6 +231,14 @@ const docs = [
     titleEn: 'Input',
     type: 'component', // 组件文档
     children: [
+      {
+        title: 'AutoComplete 自动填充',
+        titleEn: 'AutoComplete',
+        name: 'auto-complete',
+        path: '/vue/components/auto-complete',
+        component: () => import('tdesign-site/auto-complete/auto-complete.md'),
+        componentEn: () => import('tdesign-site/auto-complete/auto-complete.en-US.md'),
+      },
       {
         title: 'Cascader 级联组件',
         titleEn: 'Cascader',
@@ -479,6 +529,14 @@ const docs = [
         componentEn: () => import('tdesign-site/tag/tag.en-US.md'),
       },
       {
+        title: 'Timeline 时间轴',
+        titleEn: 'Timeline',
+        name: 'timeline',
+        path: '/vue/components/timeline',
+        component: () => import('tdesign-site/timeline/timeline.md'),
+        componentEn: () => import('tdesign-site/timeline/timeline.en-US.md'),
+      },
+      {
         title: 'Tooltip 文字提示',
         titleEn: 'Tooltip',
         name: 'tooltip',
@@ -509,7 +567,6 @@ const docs = [
         path: '/vue/components/rate',
         component: () => import('tdesign-site/rate/rate.md'),
         componentEn: () => import('tdesign-site/rate/rate.en-US.md'),
-
       },
     ],
   },
@@ -541,6 +598,12 @@ const docs = [
         path: '/vue/components/drawer',
         component: () => import('tdesign-site/drawer/drawer.md'),
         componentEn: () => import('tdesign-site/drawer/drawer.en-US.md'),
+      },
+      {
+        title: 'Guide 引导',
+        name: 'guide',
+        path: '/vue/components/guide',
+        component: () => import('tdesign-site/guide/guide.md'),
       },
       {
         title: 'Message 全局提示',
