@@ -100,7 +100,7 @@ export default {
     font-size: 24px;
     margin-left: 12px;
     font-weight: bold;
-    color: var(--td-font-gray-1);
+    color: var(--text-primary)
   }
 }
 
