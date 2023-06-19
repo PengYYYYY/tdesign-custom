@@ -1,5 +1,5 @@
 ---
-title: Tdesign Custom
+title: TDesign Custom
 description: 基于 TDesign 的桌面端组件库，适合在 vue 2 技术栈项目中使用。
 spline: explain
 ---
